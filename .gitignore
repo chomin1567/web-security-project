@@ -1,3 +1,4 @@
 *.log
 cookies*.txt
 .DS_Store
+src/data/
