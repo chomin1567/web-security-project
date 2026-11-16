@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "name": "무지 티셔츠",
+        "price": 12900,
+        "sale": 9900,
+        "desc": "베이식 코튼 반팔 티셔츠",
+        "emoji": "👕",
+        "color": "#dfe7f1"
+    },
+    {
+        "id": 2,
+        "name": "러닝 스니커즈",
+        "price": 59000,
+        "sale": 49000,
+        "desc": "가벼운 데일리 운동화",
+        "emoji": "👟",
+        "color": "#e6e1f3"
+    },
+    {
+        "id": 3,
+        "name": "캔버스 백팩",
+        "price": 34000,
+        "sale": null,
+        "desc": "수납 넉넉한 데일리 백팩",
+        "emoji": "🎒",
+        "color": "#f1e6df"
+    },
+    {
+        "id": 4,
+        "name": "보온 텀블러",
+        "price": 18500,
+        "sale": 14900,
+        "desc": "500ml 스테인리스 텀블러",
+        "emoji": "☕",
+        "color": "#dff1ea"
+    },
+    {
+        "id": 5,
+        "name": "무선 마우스",
+        "price": 22000,
+        "sale": null,
+        "desc": "정숙한 무선 광 마우스",
+        "emoji": "🖱️",
+        "color": "#eef0f2"
+    },
+    {
+        "id": 6,
+        "name": "블루투스 이어폰",
+        "price": 89000,
+        "sale": 69000,
+        "desc": "노이즈 캔슬링 무선 이어폰",
+        "emoji": "🎧",
+        "color": "#e1ecf3"
+    },
+    {
+        "id": 7,
+        "name": "기계식 키보드",
+        "price": 78000,
+        "sale": null,
+        "desc": "타건감 좋은 적축 키보드",
+        "emoji": "⌨️",
+        "color": "#f3eadf"
+    },
+    {
+        "id": 8,
+        "name": "데스크 램프",
+        "price": 25000,
+        "sale": 19900,
+        "desc": "눈이 편한 LED 스탠드",
+        "emoji": "💡",
+        "color": "#f3f0df"
+    }
+]
