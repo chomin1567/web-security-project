@@ -1,6 +1,8 @@
 <?php
 require __DIR__ . '/config.php';
 session_start();
+guard_session(); 
+
 if (empty($_SESSION['login'])) { header('Location: login.php'); exit; } // 세션만 확인 (취약 구조 유지)
 $user = $_SESSION['user'];
 

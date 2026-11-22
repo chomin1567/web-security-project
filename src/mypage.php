@@ -1,6 +1,7 @@
 <?php
 require __DIR__ . '/config.php';
 session_start();
+guard_session(); 
 
 // 로그인 안 돼 있으면 로그인 페이지로 (세션만 확인함)
 if (empty($_SESSION['login'])) {

@@ -1,6 +1,7 @@
 <?php
 require __DIR__ . '/config.php';
 session_start();
+guard_session(); 
 
 if (empty($_SESSION['login'])) { header('Location: login.php'); exit; }
 $user = $_SESSION['user'];
