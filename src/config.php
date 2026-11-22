@@ -1,10 +1,16 @@
 <?php
 // 세션 쿠키 설정 (실습용으로 보안 옵션은 꺼둠)
 ini_set('session.use_strict_mode', '0');
+
+// ===== 방어 기능 토글 =====
+define('DEF_SESSION_REGEN', false);  // 1. 로그인 시 세션ID 재발급
+define('DEF_UA_CHECK',      false);  // 2. User-Agent 이상탐지
+define('DEF_SECURE_COOKIE', false);  // 3. Secure 쿠키 (HTTPS 적용 후 true)
+
 session_set_cookie_params([
     'lifetime' => 0,
     'path'     => '/',
-    'secure'   => false,
+    'secure'   => DEF_SECURE_COOKIE,   // ← Secure 쿠키
     'httponly' => false,
     'samesite' => '',
 ]);
@@ -124,4 +130,16 @@ function orders_of($user) {
     $out = [];
     foreach (load_orders() as $o) { if ($o['user'] === $user) $out[] = $o; }
     return array_reverse($out); // 최신순
+}
+
+// ===== UA 이상탐지 ===== 
+function guard_session() {
+    if (!DEF_UA_CHECK) return;
+    if (!empty($_SESSION['login']) && isset($_SESSION['ua'])
+        && $_SESSION['ua'] !== ($_SERVER['HTTP_USER_AGENT'] ?? '')) {
+        session_unset();
+        session_destroy();
+        header('Location: login.php?err=ua');
+        exit;
+    }
 }
